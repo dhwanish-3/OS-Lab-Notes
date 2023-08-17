@@ -10,4 +10,4 @@ XSM Machine supports 3 hardware interrupts
 - Preset to values 2048, 3072 and 4096
 - OS bootstrap code must load timer interrupt handler into memory from 2048
 - and disk interrupt handler from 3072
-- and consoel interrupt handler from 4096
+- and console interrupt handler from 4096

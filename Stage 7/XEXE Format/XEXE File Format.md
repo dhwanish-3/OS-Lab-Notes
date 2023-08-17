@@ -2,10 +2,12 @@
 An XEXE executable file in eXpOS consists
 1. Header
 2. Code
+
 ![Alt text](http://exposnitc.github.io/img/exe_file.jpeg)
 
 - maximum size = EXE_SIZE = 2048
-- 1st 8 words are for header which desccribes features of a file
+- 1st 8 words are for header which describes features of a file
+
 ![Alt text](http://exposnitc.github.io/img/header.png)
 
 **XMAGIC** - number indicating the type of executable file. All XEXE files will have magic number 0.
@@ -17,14 +19,14 @@ An XEXE executable file in eXpOS consists
 **NOTE** : data and stack must be in the same memory area and must be managed by the compiler/app program (means program must contain code to initialize stack pointer). Data size field is ignored.
 
 **Runtime Library**
-- library flag is set to 1 i the XEXE file
-- if the flag not sset then neither memory is allocated nor the library linked to the address space of the process by the eXpOS loader at execution time
+- library flag is set to 1 in the XEXE file
+- if the flag not set then neither memory is allocated nor the library linked to the address space of the process by the eXpOS loader at execution time
 
 ### Low Level System Call Interface
-#### Synstem Calls
+#### System Calls
 For an application program, 2 stages of executing  a sys call:
 1. Before the System call
-- calling application must set up the arguments nthe user stack
+- calling application must set up the arguments nth user stack
 2. After the system call
 - return value of the system call must be extracted from stack
 

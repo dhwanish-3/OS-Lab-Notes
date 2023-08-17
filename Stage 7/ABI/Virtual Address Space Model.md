@@ -24,6 +24,5 @@
 #### Stack
 - space for runtime stack
 - parameters and variable associated with functions in a program are allocated in the stack
-- 
 - X_SSIZE = 1024 words
 - address space in the process = 4096 to 5119
