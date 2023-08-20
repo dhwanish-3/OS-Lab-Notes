@@ -11,14 +11,27 @@ When OS enters an interrupt handler that runs in kernel mode , the interrupt han
 #### Process Table
 - Process table starts at page number 56(address 28672)
 - has space for 16 entries (each 16 words)
-- user stack(word 13)
+- user stack (word 13)
 - user area page number (word 11)
+- PID (word 1)
 
 #### Modification to the OS Startup code
 - First available free page is 80
 - User Area page is allocated at physical page number 80
 - SPL constant PROCESS_TABLE = 28672
-- kernel maintains a data structure called **System Status Table** where the PID of curren tuser process is stored
+- kernel maintains a data structure called **System Status Table** where the PID of curret user process is stored
 - System Status table is started from 29560
 - SPL constant SYSTEM_STATUS_TABLE = 29560
 - all interrupt handlers assume kernel stack is empty
+
+```
+[PROCESS_TABLE + ( [SYSTEM_STATUS_TABLE + 1] * 16) + 13] = SP;
+// Setting SP to UArea Page number * 512 - 1
+SP = [PROCESS_TABLE + ([SYSTEM_STATUS_TABLE + 1] * 16) + 11] * 512 - 1;
+backup;
+print "TIMER";
+restore;
+SP = [PROCESS_TABLE + ( [SYSTEM_STATUS_TABLE + 1] * 16) + 13];
+ireturn;
+
+```
