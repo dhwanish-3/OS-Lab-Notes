@@ -52,6 +52,7 @@ SP   <- User Area Page Number * 512 - 1
 ```
 
 <h3>Actions done by the System call service routine before returning from the system call</h3>
+
 a. Store the return value in the user stack
 b. Set the stack pointer (SP) to top of the user stack
 c. Set the MODE field in process table entry of the current process to 0

@@ -3,9 +3,9 @@
 ### Initialize
 - Arguments: None
 - Return Value:
-    - 0 - success
+    - 0 - Success
     - 1 - Failure
-- Initializes heap data structurs
+- Initializes heap data structure
 - sets up heap area of the process
 - Applications responsilbility to invoke Initialize() before the first use of Alloc()
 - behaviour of Alloc() and Free() when invoked without an Initailize() operation is undefined

@@ -17,19 +17,21 @@ Examples:
 ```
 fd = exposcall("Open", "example.dat");
 ```
-    - return value is file descriptor for file example.dat on success
+- return value is file descriptor for file example.dat on success
 
 2. to write the value stored in variable "num" to this file,
 ```
 temp = exposcall("Write", fd, num);  // return value stored in temp
 ```
-    - to write to terminal use -2 as first argument
+- to write to terminal use -2 as first argument
 ```
-temp = exposcall("Write", fd, num);  // Invalid call```
+temp = exposcall("Write", fd, num - 2);  // Invalid call
+```
+
 
 3. Alloc is a library function
-    - it is a dynamic memeory management routine
-    - it allocates memory for variables of user defined type in ExpL
+- it is a dynamic memeory management routine
+- it allocates memory for variables of user defined type in ExpL   
 ExpL call to allocate memory for variable 'data', which requires 3 words of memory is
 ```
 data = exposcall("Alloc", 3);

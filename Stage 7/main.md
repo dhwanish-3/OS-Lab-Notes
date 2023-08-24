@@ -3,8 +3,8 @@
 #### Modifying INIT
 - to comply with XEXE format
 - first 8 words of the must contain header
-- OS i sexpected to load file into logical pages starting from page 4
-- first disk bloack of program is loaded into logical address from 2048, second (if 512 words not enough) to 2560 & so on
+- OS is expected to load file into logical pages starting from page 4
+- first disk block of program is loaded into logical address from 2048, second (if 512 words not enough) to 2560 & so on
 
 - first instruction in program loaded to 2056
 - second instruction at 2058 & so on
