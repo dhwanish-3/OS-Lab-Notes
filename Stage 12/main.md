@@ -5,7 +5,7 @@
 - stored at disk blocks 11 and 12
 - OS bootstrap loader must load this program to memory pages 69 & 70
 - page table and process table for the idle process must be set up by bootstrap loader
-- PIP = 0
+- PID = 0
 
 ### Modificaton to OS Startup code
 - PID(idle) = 0
@@ -27,7 +27,7 @@
 - in case of RUNNING and CREATED states, 2nd word is not required
 
 - when process in user mode active stack = user stack (logical page 8-9 of process)
-- when process switches to kernel mode, kernele code save SP value to UPTR and set the SP register to physical address of top of kernel stack
+- when process switches to kernel mode, kernel code save SP value to UPTR and set the SP register to physical address of top of kernel stack
 - when it switches back to user mode, kernel stack is always empty
 - Hence, SP must be set to value (User Area Page Number * 512 - 1) when kernel mode is entered
 

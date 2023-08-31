@@ -20,7 +20,7 @@
 1. new child process with new pid and address space is created which is an exact replica of the original process with same library, code, stack and heap regions.
 - fork call returns the pid of the child to parent
 - the heap, code and library regions of the parent are shard by the child
-    => modification of conttents of these regions by one process during subsequent execution will change the other as well
+    => modification of contents of these regions by one process during subsequent execution will change the other as well
     - both process are in concurrent execution subsequent to the fork operation
     - Stack is seperate for the child and is not shared
 

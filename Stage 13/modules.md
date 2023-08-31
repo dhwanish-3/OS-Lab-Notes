@@ -28,8 +28,8 @@
 - called **Boot Module**(module 7)
 - invoked from OS startup code
 - OS startup code
-    - hand-created the idle process
-    - initializes Sp register to kernel stack of idle process
+    - hand-creates the idle process
+    - initializes SP register to kernel stack of idle process
     - loads module 7 in memory
     - then invokes boot module (using stack of IDLE process)
     - upon return from boot module, OS startup code initiates user mode execution of idle process

@@ -18,7 +18,7 @@
 - eXpOS loader is the interrupt service routine corresponding to **Exec** system call
 
 - process may open files or semaphores
-- OS asociates a file handle with each openn instance of a file
+- OS asociates a file handle with each open instance of a file
 - OS assigns a semaphore identifier (semid) for each semaphore acquired by the process
 - the above 2 are also attributes of the process
 - in addition process has **context**
