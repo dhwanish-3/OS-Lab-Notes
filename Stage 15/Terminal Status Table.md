@@ -12,7 +12,7 @@
     - initially set to 0
     - set to 1 when busy
     - **Terminal Interrupt Handler** sets back the status to 0 upon completion of Terminal Read
-    - **Write system call** sets back the status to - upon completion of Terminal Write
+    - **Write system call** sets back the status to 0 upon completion of Terminal Write
 
 - **PID** (1 word) 
     - specifies the PID of the process which is currently using terminal

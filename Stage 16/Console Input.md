@@ -6,7 +6,7 @@
 - executed only inside a sys call/module
 
 - read sys call invokes **Terminal Read** function in **Device Manager Module**(module 4)
-- IN instruction will be executed withis this function
+- IN instruction will be executed within this function
 
 - IN will not wait for the data to arrive in P0
     -> need for mechanism to detect arrival of data to P0

@@ -8,7 +8,7 @@
 
 - Before the use of a resource, a process has to first acquire the required resource by invoking resource manager
 - A process can acquire a resource if the resource is not already acquired by some other process
-- if resource not available, then that process has to be blocked unti resource becomes free.
+- if resource not available, then that process has to be blocked until resource becomes free.
 
 - A blocked process must wake up when the requested resource is released by the process which had acquired the resource
 - For this, **when a process releases a resource, the state of other processes waiting for the resource must be set to READY**
@@ -32,13 +32,13 @@
     - prints the word in R3
     - releases the terminal using Release Terminal
 
-- invoker must save the registers in use to th kernel stack od the process invoking the module
+- invoker must save the registers in use to the kernel stack of the process invoking the module
 
 - R0 -> used for return value
 
 - Acquire Terminal function
     - waits in a loop
-    - repeatedly invokes the scheduler if the terminal is not fre
+    - repeatedly invokes the scheduler if the terminal is not free
     - this kind of  waiting loop is called **Busy loop or Busy wait**
 
 #### Need for a Busy Loop or Busy wait
@@ -46,7 +46,7 @@
 - However, the process may find the resource locked again when it tries to acquire the resource when it resumes execution
 - Reason
     - When a resource is released, all processes waiting for the resource are woken up by the OS.
-    Only the one tha get scheduled first will be able to lock the resource successfully
+    Only the one that get scheduled first will be able to lock the resource successfully
     - other processes will have to wait for the resource repeatedly.
 
 

@@ -3,7 +3,7 @@
 - load(page_num, block_num)
 - store(disk_num, page_num)
 
-- actual data transfer involves time delays as disk acces is slow
+- actual data transfer involves time delays as disk access is slow
 
 - On load/Store instruction, XSM machine will
     - start a disk transfer
@@ -20,7 +20,7 @@
 
 - After execution of each instruction in unprivileged mode, the machine checks whether a pending disk/console/timer interrupt. If so
     1. Push the IP value into top of the stack
-    2. Set IP to value store in interrupt vector table entry for timer interrupt handler
+    2. Set IP to value stored in interrupt vector table entry for timer interrupt handler
         - this entry is located at physical address 493 in page 0(ROM) of XSM 
         - value is 2048 in this location
         - machine switches mode (address translation off)
