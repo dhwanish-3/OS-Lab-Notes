@@ -45,7 +45,7 @@ In such case
 - In previous stage, we allocated 2 pages for each heap and stack 
 - we modify to allocate only allocate pages for stack (nothing for heap)
 
-- *For code blocks, only 1 page is allocated & first code block is loaded into that memory page
+- For code blocks, only 1 page is allocated & first code block is loaded into that memory page
 
 - we use **Get Code Page** in memory manager module for doing both allocating memory page & loading one code block
 
@@ -74,7 +74,7 @@ In such case
         - if found, then function checks if the code block is loaded into a memory page
         - if code block is already present in some memory page, then just returns that memory page number
         - if not, a new memory page is allocated by invoking *Get Free Page* function  in memory manager module
-        - followed by loading code block using *Disk Load* function device mamger module
+        - followed by loading code block using *Disk Load* function device manager module
 
 - return memory page number
 
@@ -88,8 +88,8 @@ In such case
 
 - *eXpOS is designed such that, page fault can only occur for heap and code pages*
 
-- using EPN register, the exhanlder find out whether page fault has caused for heap or code page
-- **for heap EPN = 2 or 3** exhanlder allocates 2 new memory pages by invoking *Get Free Page* function in memory manager module
+- using EPN register, the exhandler find out whether page fault has caused for heap or code page
+- **for heap EPN = 2 or 3** exhandler allocates 2 new memory pages by invoking *Get Free Page* function in memory manager module
 
 - for code page, exhandler invokes **Get Code Page** in memory manager module & page table is updated
 
