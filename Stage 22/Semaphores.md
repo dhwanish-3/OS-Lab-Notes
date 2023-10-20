@@ -19,13 +19,13 @@
 
 #### Per-Process Resource Table
 
-- A process mantains record of the semaphores/files acquired by it in its **Per-Process resource table**
+- A process maintains record of the semaphores/files acquired by it in its **Per-Process resource table**
 - Per-process resource table can store at most 8 entries
 - each entry contains 2 words
     - Resource Identifier(1 word) - *FILE* (0) or *SEMAPHORE* (1)
     - Index of open file table/semaphore table entry (1 word)
 
-- free entry is indicated by -1 in the Resources Identifier field
+- free entry is indicated by -1 in the Resource Identifier field
 
 
 #### Semget System Call

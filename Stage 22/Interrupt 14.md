@@ -15,5 +15,5 @@
 #### SemUnlock System Call
 - system call number = 20
 - arguments - semaphore descriptor(SEMID)
-- invalidates the LOCKING PID field (= -1) in the semaphore table entry for the semapphore
+- invalidates the LOCKING PID field (= -1) in the semaphore table entry for the semaphore
 - wakes up all processes waiting for the semaphore by changing their state to READY
