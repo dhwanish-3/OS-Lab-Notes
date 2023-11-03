@@ -9,7 +9,7 @@
 - parent and child will share code and heap regions
 - 2 new stack pages & a new user area page
 
-- process table of child is initialized woth the same values of parent except for values
+- process table of child is initialized with the same values of parent except for values
     - *TICK, PID, PPID, USER AREA PAGE NUMBER, KERNEL STACK POINTER, INPUT BUFFER, MODE FLAG, PTBR & PTLR*
 
 - contents of stack of parent are copied into the new stack pages (child)
